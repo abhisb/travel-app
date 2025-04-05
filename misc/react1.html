@@ -1,0 +1,79 @@
+import React from "react"; import { Card, CardContent } from
+"@/components/ui/card"; import { Button } from "@/components/ui/button"; import
+{ MapPin, Calendar, PhoneCall } from "lucide-react"; const destinations = [ {
+title: "Backwaters of Alleppey", description: "Experience the serene beauty of
+Kerala's famous backwaters with luxury houseboats and scenic views.", image:
+"/images/alleppey.jpg", }, { title: "Munnar Hills", description: "Breathtaking
+tea plantations, misty mountains, and cool climate make Munnar a must-visit.",
+image: "/images/munnar.jpg", }, { title: "Kovalam Beach", description: "Golden
+sand beaches and thrilling water sports await at the vibrant Kovalam coast.",
+image: "/images/kovalam.jpg", }, { title: "Thekkady Wildlife", description:
+"Explore the wild heart of Kerala with jungle safaris and elephant rides at
+Periyar Tiger Reserve.", image: "/images/thekkady.jpg", }, ]; export default
+function KeralaTravelPage() { return (
+<div className="bg-white text-gray-800">
+  <header className="bg-green-700 text-white p-6 text-center shadow-xl">
+    <h1 className="text-4xl font-bold">Discover Kerala</h1>
+    <p className="text-xl mt-2">Your Gateway to God's Own Country</p>
+    <button className="mt-4 bg-yellow-400 text-black hover:bg-yellow-500">
+      Plan Your Trip Now
+    </button>
+  </header>
+
+  <section className="p-8">
+    <h2 className="text-3xl font-semibold text-center mb-8">
+      Top Destinations
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {destinations.map((place, index) => (
+      <Card key="{index}" className="rounded-2xl overflow-hidden shadow-md">
+        <img
+          src="{place.image}"
+          alt="{place.title}"
+          className="h-48 w-full object-cover"
+        />
+        <CardContent className="p-4">
+          <h3 className="text-xl font-bold mb-2">{place.title}</h3>
+          <p className="text-sm text-gray-600">{place.description}</p>
+        </CardContent>
+      </Card>
+      ))}
+    </div>
+  </section>
+
+  <section className="bg-yellow-50 p-8 text-center">
+    <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
+    <ul className="text-gray-700 space-y-2">
+      <li>✓ Customized travel packages for every type of traveler</li>
+      <li>✓ 24/7 Customer support and travel assistance</li>
+      <li>✓ Trusted local guides and seamless experiences</li>
+      <li>✓ Affordable and transparent pricing</li>
+    </ul>
+  </section>
+
+  <section className="p-8 bg-green-100 text-center">
+    <h2 className="text-2xl font-semibold mb-4">Ready to Explore Kerala?</h2>
+    <p className="mb-4 text-gray-700">
+      Contact us today to create your dream vacation itinerary.
+    </p>
+    <div className="flex flex-col items-center space-y-2">
+      <div className="flex items-center gap-2">
+        <PhoneCall className="text-green-700" />
+        <span>+91 98765 43210</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <Calendar className="text-green-700" />
+        <span>Open: Mon - Sat, 9 AM - 7 PM</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <MapPin className="text-green-700" />
+        <span>Kochi, Kerala, India</span>
+      </div>
+    </div>
+  </section>
+
+  <footer className="bg-green-700 text-white text-center p-4 mt-8">
+    &copy; 2025 Kerala Holidays. All rights reserved.
+  </footer>
+</div>
+); }

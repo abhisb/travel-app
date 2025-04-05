@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Kerala</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-gray-800">
+    <header class="bg-green-700 text-white p-6 text-center shadow-xl">
+      <h1 class="text-4xl font-bold">Discover Kerala</h1>
+      <p class="text-xl mt-2">Your Gateway to God's Own Country</p>
+      <button
+        class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500"
+      >
+        Plan Your Trip Now
+      </button>
+    </header>
+
+    <section class="p-8">
+      <h2 class="text-3xl font-semibold text-center mb-8">Top Destinations</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        id="destinations"
+      >
+        <!-- Destination cards will be inserted here -->
+      </div>
+    </section>
+
+    <section class="bg-yellow-50 p-8 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
+      <ul class="text-gray-700 space-y-2">
+        <li>✓ Customized travel packages for every type of traveler</li>
+        <li>✓ 24/7 Customer support and travel assistance</li>
+        <li>✓ Trusted local guides and seamless experiences</li>
+        <li>✓ Affordable and transparent pricing</li>
+      </ul>
+    </section>
+
+    <section class="p-8 bg-green-100 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Ready to Explore Kerala?</h2>
+      <p class="mb-4 text-gray-700">
+        Contact us today to create your dream vacation itinerary.
+      </p>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="flex items-center gap-2">
+          📞 <span>+91 98765 43210</span>
+        </div>
+        <div class="flex items-center gap-2">
+          📅 <span>Open: Mon - Sat, 9 AM - 7 PM</span>
+        </div>
+        <div class="flex items-center gap-2">
+          📍 <span>Kochi, Kerala, India</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-green-700 text-white text-center p-4 mt-8">
+      &copy; 2025 Kerala Holidays. All rights reserved.
+    </footer>
+
+    <script>
+      const destinations = [
+        {
+          title: "Backwaters of Alleppey",
+          description:
+            "Experience the serene beauty of Kerala's famous backwaters with luxury houseboats and scenic views.",
+          image: "images/alleppey.jpg",
+        },
+        {
+          title: "Munnar Hills",
+          description:
+            "Breathtaking tea plantations, misty mountains, and cool climate make Munnar a must-visit.",
+          image: "images/munnar.jpg",
+        },
+        {
+          title: "Kovalam Beach",
+          description:
+            "Golden sand beaches and thrilling water sports await at the vibrant Kovalam coast.",
+          image: "images/kovalam.jpg",
+        },
+        {
+          title: "Thekkady Wildlife",
+          description:
+            "Explore the wild heart of Kerala with jungle safaris and elephant rides at Periyar Tiger Reserve.",
+          image: "images/thekkady.jpg",
+        },
+      ];
+
+      const container = document.getElementById("destinations");
+
+      destinations.forEach((place) => {
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-2xl overflow-hidden shadow-md";
+        card.innerHTML = `
+        <img src="${place.image}" alt="${place.title}" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">${place.title}</h3>
+          <p class="text-sm text-gray-600">${place.description}</p>
+        </div>
+      `;
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

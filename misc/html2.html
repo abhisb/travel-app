@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Kerala</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <header class="bg-green-700 text-white p-6 text-center shadow-xl">
+      <h1 class="text-4xl font-bold">Discover Kerala</h1>
+      <p class="text-xl mt-2">Your Gateway to God's Own Country</p>
+      <button
+        class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500"
+      >
+        Plan Your Trip Now
+      </button>
+    </header>
+
+    <section class="p-8">
+      <h2 class="text-3xl font-semibold text-center mb-8">Top Destinations</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        id="destinations"
+      >
+        <!-- Destination cards will be inserted here -->
+      </div>
+    </section>
+
+    <section class="bg-white p-8">
+      <h2 class="text-3xl font-semibold text-center mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-map-trifold text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Customized Tour Packages</h3>
+          <p>
+            Create personalized vacation plans based on your preferences,
+            budget, and schedule.
+          </p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-hotel text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Hotel & Resort Bookings</h3>
+          <p>
+            Get the best deals on premium and budget accommodations across
+            Kerala.
+          </p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-car text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Transportation Services</h3>
+          <p>
+            Reliable and comfortable vehicle arrangements with professional
+            drivers.
+          </p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-boat text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Houseboat Cruises</h3>
+          <p>
+            Enjoy peaceful and scenic houseboat rides through Kerala's iconic
+            backwaters.
+          </p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-mountains text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Adventure Activities</h3>
+          <p>
+            Plan for trekking, wildlife safaris, kayaking, and more thrilling
+            experiences.
+          </p>
+        </div>
+        <div class="bg-yellow-100 p-6 rounded-2xl shadow-md text-center">
+          <i class="ph ph-users-three text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Cultural Tours</h3>
+          <p>
+            Explore Kerala's rich traditions, art forms, festivals, and heritage
+            sites.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-yellow-50 p-8 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
+      <ul class="text-gray-700 space-y-2">
+        <li>✓ Customized travel packages for every type of traveler</li>
+        <li>✓ 24/7 Customer support and travel assistance</li>
+        <li>✓ Trusted local guides and seamless experiences</li>
+        <li>✓ Affordable and transparent pricing</li>
+      </ul>
+    </section>
+
+    <section class="p-8 bg-green-100 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Ready to Explore Kerala?</h2>
+      <p class="mb-4 text-gray-700">
+        Contact us today to create your dream vacation itinerary.
+      </p>
+      <div class="flex flex-col items-center space-y-2">
+        <div class="flex items-center gap-2">
+          📞 <span>+91 98765 43210</span>
+        </div>
+        <div class="flex items-center gap-2">
+          📅 <span>Open: Mon - Sat, 9 AM - 7 PM</span>
+        </div>
+        <div class="flex items-center gap-2">
+          📍 <span>Kochi, Kerala, India</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-green-700 text-white text-center p-4 mt-8">
+      &copy; 2025 Kerala Holidays. All rights reserved.
+    </footer>
+
+    <script>
+      const destinations = [
+        {
+          title: "Backwaters of Alleppey",
+          description:
+            "Experience the serene beauty of Kerala's famous backwaters with luxury houseboats and scenic views.",
+          image: "images/alleppey.jpg",
+        },
+        {
+          title: "Munnar Hills",
+          description:
+            "Breathtaking tea plantations, misty mountains, and cool climate make Munnar a must-visit.",
+          image: "images/munnar.jpg",
+        },
+        {
+          title: "Kovalam Beach",
+          description:
+            "Golden sand beaches and thrilling water sports await at the vibrant Kovalam coast.",
+          image: "images/kovalam.jpg",
+        },
+        {
+          title: "Thekkady Wildlife",
+          description:
+            "Explore the wild heart of Kerala with jungle safaris and elephant rides at Periyar Tiger Reserve.",
+          image: "images/thekkady.jpg",
+        },
+      ];
+
+      const container = document.getElementById("destinations");
+
+      destinations.forEach((place) => {
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-2xl overflow-hidden shadow-md";
+        card.innerHTML = `
+        <img src="${place.image}" alt="${place.title}" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">${place.title}</h3>
+          <p class="text-sm text-gray-600">${place.description}</p>
+        </div>
+      `;
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
